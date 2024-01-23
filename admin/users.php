@@ -11,7 +11,7 @@ $run_query_select = mysqli_query($conn, $query_select);
         <h3 class="page-title">Users</h3>
 
         <div class="card">
-            <a href="users_add.php" class="btn" title="tambah data"><i class="fa fa-plus"></i></a>
+            <a href="user_add.php" class="btn" title="tambah data"><i class="fa fa-plus"></i></a>
             <table class="table">
                 <thead>
                     <tr>
@@ -31,7 +31,7 @@ $run_query_select = mysqli_query($conn, $query_select);
                                 <td><?= $row['namalengkap'] ?></td>
                                 <td><?= $row['username'] ?></td>
                                 <td align="center">
-                                    <a href="users_edit.php?id=<?= $row['iduser'] ?>" class="btn" title="Edit Data">
+                                    <a href="user_edit.php?id=<?= $row['iduser'] ?>" class="btn" title="Edit Data">
                                         <i class="fa fa-edit"></i></a>
                                     <a href="?delete=<? $row['iduser'] ?>" class="btn" onclick="return confirm('yakin ?')" title="Hapus Data">
                                         <i class="fa fa-times"></i></a>
