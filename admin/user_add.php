@@ -38,13 +38,15 @@ require_once 'header_template.php';
             if (isset($_POST['submit'])) {
 
                 // proses inser data
-                $query_insert = 'insert into users (namalengkap, username, password) value
+                $query_insert = 'INSERT INTO users (namalengkap, username, password) VALUES
                 ("' . $_POST['nama'] . '", "' . $_POST['user'] . '", "' . md5($_POST['pass']) . '")';
 
                 $run_query_insert = mysqli_query($conn, $query_insert);
 
                 if ($run_query_insert) {
                     echo 'simpan data berhasil';
+                    header("Location: users.php");
+                    exit();
                 } else {
                     echo 'simpan data gagal';
                 }

@@ -33,9 +33,9 @@ $run_query_select = mysqli_query($conn, $query_select);
                                 <td align="center">
                                     <a href="user_edit.php?id=<?= $row['iduser'] ?>" class="btn" title="Edit Data">
                                         <i class="fa fa-edit"></i></a>
-                                    <a href="?delete=<? $row['iduser'] ?>" class="btn" onclick="return confirm('yakin ?')" title="Hapus Data">
-                                        <i class="fa fa-times"></i></a>
-                                </td>
+                                    <a href="delete.php?delete=<?php echo $row['iduser']; ?>" class="btn" onclick="return confirm('Yakin ingin menghapus data?')" title="Hapus Data">
+                                        <i class="fa fa-times"></i>
+                                    </a>
                             </tr>
                         <?php }
                     } else { ?>
